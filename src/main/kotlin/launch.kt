@@ -1,7 +1,7 @@
 import kotlinx.coroutines.*
 import kotlin.system.measureTimeMillis
 
-//fun main() = runBlocking {
+//fun main() = runBlocking<Unit> {
 //    launch {
 //        delay(500L)
 //        println("World!")
@@ -9,9 +9,7 @@ import kotlin.system.measureTimeMillis
 //    println("Hello")
 //}
 
-fun main() {
-
-    runBlocking {
+fun main() = runBlocking<Unit> {
 
         val job1: Job = launch {
             val timeMillis = measureTimeMillis {
@@ -34,5 +32,3 @@ fun main() {
         job2.start()
 
     }
-
-}

@@ -2,9 +2,7 @@ import kotlinx.coroutines.*
 
 fun sum(a: Int, b: Int) = a + b
 
-fun main() {
-
-    runBlocking {
+fun main() = runBlocking<Unit> {
 
         val result1: Deferred<Int> = async {
             delay(100)
@@ -22,5 +20,3 @@ fun main() {
 
 
     }
-
-}
